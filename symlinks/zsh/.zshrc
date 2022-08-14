@@ -125,7 +125,7 @@ export NVM_DIR="$HOME/.nvm"
 
 ### Custom Alias
 alias brewup='brew update; brew upgrade; brew cleanup; brew autoremove; brew doctor;'
-alias zshconfig="code ~/.zshrc"
+alias zshconfig="code $HOME/dotfiles/symlinks/zsh/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 
 alias cachesize="du -sh ~/Library/Caches/"
@@ -135,6 +135,7 @@ alias refreshenv="source ~/.zshrc"
 alias viconfig="vi $HOME/dotfiles/symlinks/zsh/.zshrc"
 alias caskupgrade="brew cu -y --no-quarantine"
 alias addspacer="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'; killall Dock"
+alias dumpbrew="brew bundle dump --file=$HOME/.dotfiles/Brewfile --force"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
