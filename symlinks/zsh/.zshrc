@@ -1,3 +1,4 @@
+# >>> p10k >>>
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -26,25 +27,27 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 source $ZSH/oh-my-zsh.sh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# <<< p10k <<<
 
-### NVM
+# >>> NVM >>>
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# <<< NVM <<<
 
-### Custom Alias
+# >>> Custom Alias >>>
 alias brewup='brew update; brew upgrade; brew cleanup; brew autoremove; brew doctor;'
-alias zshconfig="code $HOME/dotfiles/symlinks/zsh/.zshrc"
+alias zshconfig="code $HOME/.dotfiles/symlinks/zsh/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
-
 alias cachesize="du -sh ~/Library/Caches/"
 alias cacheclear="rm -r ~/Library/Caches/*"
 alias cachenav="cd ~/Library/Caches/ && open ."
-alias refreshenv="source ~/.zshrc"
+alias refreshenv="ln -sf $HOME/.dotfiles/symlinks/zsh/.zshrc ~/.zshrc; source ~/.zshrc"
 alias viconfig="vi $HOME/dotfiles/symlinks/zsh/.zshrc"
 alias caskupgrade="brew cu -y --no-quarantine"
 alias addspacer="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'; killall Dock"
 alias dumpbrew="brew bundle dump --file=$HOME/.dotfiles/Brewfile --force"
+# <<< Custom alias <<<
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
