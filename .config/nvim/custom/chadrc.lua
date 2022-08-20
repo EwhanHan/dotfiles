@@ -14,7 +14,5 @@ M.plugins = {
   user = require "custom.plugins"
 }
 
--- Activate below to override mappings
--- M.mappings = require "custom.mappings"
 
 return M
