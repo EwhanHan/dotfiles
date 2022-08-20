@@ -26,4 +26,6 @@ return {
       require "custom.plugins.lspconfig"
     end,
   },
+
+  ["folke/which-key.nvim"] = { disable = false }
 }
