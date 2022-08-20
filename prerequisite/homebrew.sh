@@ -10,5 +10,5 @@ while true; do
   kill -0 "$$" || exit
 done 2>/dev/null &
 
-# Install Homebrew
+# Install Homebrew https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

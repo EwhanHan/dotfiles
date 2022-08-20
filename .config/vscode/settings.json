@@ -1,7 +1,7 @@
 {
   //! terminal
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.fontFamily": "'SourceCodePro+Powerline+Awesome Regular'",
+  "terminal.integrated.fontFamily": "'MesloLGS NF'",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
@@ -215,5 +215,14 @@
   // title bar inline
   "window.titleBarStyle": "native",
   "customizeUI.titleBar": "inline",
-  "customizeUI.activityBar": "bottom"
+  "customizeUI.activityBar": "bottom",
+
+  // shell-format
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "Lua.telemetry.enable": false,
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  }
 }
