@@ -52,3 +52,7 @@ cask "via"
 cask "visual-studio-code"
 cask "vlc"
 cask "zoom"
+
+mas install 417375580 "BetterSnapTool"
+mas install 1569813296 "1Password for Safari"
+mas install 1440147259 "AdGuard"
