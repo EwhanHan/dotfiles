@@ -27,5 +27,12 @@ return {
     end,
   },
 
-  ["folke/which-key.nvim"] = { disable = false }
+  ["folke/which-key.nvim"] = { disable = false },
+
+  ['gelguy/wilder.nvim'] = {
+    config = function()
+      -- config goes here
+      require "custom.plugins.wilder"
+    end,
+  }
 }

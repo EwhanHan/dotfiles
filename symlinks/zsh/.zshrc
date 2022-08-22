@@ -48,6 +48,7 @@ alias viconfig="vi $HOME/dotfiles/symlinks/zsh/.zshrc"
 alias caskupgrade="brew cu -y --no-quarantine"
 alias addspacer="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'; killall Dock"
 alias dumpbrew="brew bundle dump --file=$HOME/.dotfiles/Brewfile --force"
+alias pip="pip3"
 # <<< Custom alias <<<
 
 # >>> conda initialize >>>
