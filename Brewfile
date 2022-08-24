@@ -12,8 +12,10 @@ brew "fd"
 brew "gh"
 brew "git"
 brew "htop"
+brew "mas"
 brew "neovim"
 brew "nvm"
+brew "python@3.10"
 brew "poetry"
 brew "ripgrep"
 brew "tree"
@@ -53,6 +55,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "zoom"
 
-mas install 417375580 "BetterSnapTool"
-mas install 1569813296 "1Password for Safari"
-mas install 1440147259 "AdGuard"
+mas install 417375580 
+mas install 1569813296 
+mas install 1440147259 
+mas install 937984704

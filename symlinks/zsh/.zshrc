@@ -49,6 +49,7 @@ alias caskupgrade="brew cu -y --no-quarantine"
 alias addspacer="defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'; killall Dock"
 alias dumpbrew="brew bundle dump --file=$HOME/.dotfiles/Brewfile --force"
 alias pip="pip3"
+alias cleanpip="pip3 freeze | xargs pip3 uninstall -y"
 # <<< Custom alias <<<
 
 # >>> conda initialize >>>
