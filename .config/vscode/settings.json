@@ -1,4 +1,14 @@
 {
+  //! theme / visual
+  "workbench.colorTheme": "One Dark Pro",
+  "window.autoDetectColorScheme": false,
+  "workbench.preferredDarkColorTheme": "Dracula",
+  "workbench.preferredLightColorTheme": "One Dark Pro",
+  "workbench.iconTheme": "file-icons",
+  "workbench.productIconTheme": "icons-carbon",
+  "workbench.fontAliasing": "antialiased",
+  "workbench.sideBar.location": "right",
+
   //! terminal
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontFamily": "'MesloLGS NF'",
@@ -18,27 +28,32 @@
   "workbench.reduceMotion": "on",
   "workbench.editor.enablePreview": false, // open file on single click
   "workbench.layoutControl.enabled": false,
-
-  //! theme
-  "workbench.colorTheme": "One Dark Pro",
-  "window.autoDetectColorScheme": false,
-  "workbench.preferredDarkColorTheme": "Dracula",
-  "workbench.preferredLightColorTheme": "One Dark Pro",
-  "workbench.iconTheme": "file-icons",
-  "workbench.productIconTheme": "icons-carbon",
+  "workbench.editor.tabCloseButton": "left",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.editor.limit.value": 5,
+  "workbench.tree.indent": 10,
+  "workbench.tree.expandMode": "singleClick",
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.labelFormat": "short",
 
   //! editor
   "editor.fontLigatures": true,
   "editor.fontFamily": "Input Mono, Fira Code, monospace, Menlo",
+  "editor.tabSize": 2,
+  "editor.cursorSmoothCaretAnimation": true, // must have
+  "editor.fontSize": 15,
+  "editor.smoothScrolling": true,
+
   "editor.find.addExtraSpaceOnTop": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.accessibilitySupport": "off",
-  "editor.smoothScrolling": true,
-  "editor.tabSize": 2,
-  "editor.cursorSmoothCaretAnimation": true,
-  "editor.fontSize": 14,
 
+  "breadcrumbs.enabled": false,
   "editor.minimap.enabled": false,
+  "editor.wordWrap": "wordWrapColumn", // default is off
+  "editor.cursorStyle": "block",
+
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "auto",
   "editor.scrollbar.horizontalScrollbarSize": 9,
@@ -48,15 +63,22 @@
   "editor.guides.bracketPairs": "active",
   "editor.linkedEditing": true, // auto update tags
 
-  "editor.wordWrap": "wordWrapColumn", // default is off
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.renderWhitespace": "boundary",
 
-  //! formatter
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.rulers": [80],
+
+  //! suggestion
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.suggest.localityBonus": true,
+  "editor.snippetSuggestions": "top",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
 
   //! notifications
   "window.dialogStyle": "custom", // * not sure about this one
-  // "window.nativeTabs": true, // this is great, macOS only
-  // "window.titleBarStyle": "native",
+  "window.commandCenter": true,
 
   "search.exclude": {
     "**/.git": true,
@@ -74,10 +96,11 @@
     "**/package-lock.json": true,
     "**/pnpm-lock.yaml": true,
     "**/tmp": true,
-    "**/yarn.lock": true
+    "**/yarn.lock": true,
+    "**/build": true
   },
-
   "diffEditor.ignoreTrimWhitespace": false,
+  "explorer.sortOrder": "type",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "files.eol": "\n",
@@ -89,7 +112,7 @@
     "**/.nuxt": true,
     "**/.output": true,
     "**/.pnpm": true,
-    "**/.vscode": true,
+    "**/.vscode": false,
     "**/.yarn": true,
     "**/bower_components": true,
     "**/dist/**": true,
@@ -99,13 +122,19 @@
     "**/package-lock.json": true,
     "**/pnpm-lock.yaml": true,
     "**/tmp": true,
-    "**/yarn.lock": true
+    "**/yarn.lock": true,
+    "**/.ipynb_checkpoints": true,
+    "**/build": true
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
   },
 
-  //! suggestion
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.suggest.localityBonus": true,
-  "editor.snippetSuggestions": "top",
+  //! Git
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.untrackedChanges": "separate",
 
   //! emmet
   "emmet.triggerExpansionOnTab": true,
@@ -114,11 +143,21 @@
   },
   "emmet.showSuggestionsAsSnippets": true,
 
-  //! language specific
-  "python.defaultInterpreterPath": "/usr/bin/python3",
+  //! formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
 
+  //! language specific
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
+
+  //? not sure if these are any good
+  "javascript.format.insertSpaceAfterConstructor": true,
+  "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+  "typescript.format.insertSpaceAfterTypeAssertion": true,
+  "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+  "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
 
   //! telemetry
   "telemetry.telemetryLevel": "off",
@@ -132,10 +171,14 @@
   },
 
   //! extensions
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.ignoreRecommendations": true,
+
   "tailwindCSS.includeLanguages": {
     "plaintext": "javascript"
   },
 
+  //! extension specific
   "cSpell.allowCompoundWords": true,
   "cSpell.userWords": [
     "clsx",
@@ -148,6 +191,10 @@
   ],
   "cSpell.enableFiletypes": ["!json", "!jsonc", "!json5"],
 
+  //! eslint
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
   "eslint.quiet": true,
   "eslint.validate": [
     "javascript",
@@ -163,8 +210,6 @@
   ],
 
   "prettier.singleQuote": true,
-
-  "extensions.autoUpdate": "onlyEnabledExtensions",
 
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.enabled": false,
@@ -212,17 +257,25 @@
       "stash": true
     }
   },
-  // title bar inline
-  "window.titleBarStyle": "native",
-  "customizeUI.titleBar": "inline",
-  "customizeUI.activityBar": "bottom",
 
   // shell-format
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
   "Lua.telemetry.enable": false,
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
-  }
+  },
+
+  "autoDocstring.startOnNewLine": true,
+
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importQuotes": "'",
+  "npm-intellisense.importLinebreak": ";\r\n",
+  "npm-intellisense.importDeclarationType": "const",
+  "npm-intellisense.scanDevDependencies": true
 }

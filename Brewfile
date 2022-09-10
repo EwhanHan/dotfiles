@@ -30,17 +30,12 @@ cask "appcleaner"
 cask "cleanshot"
 cask "discord"
 cask "docker"
-cask "dotnet-sdk"
 cask "firefox"
-cask "font-fira-code"
-cask "font-fira-code-nerd-font"
-cask "font-hack-nerd-font"
 cask "font-input"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-sf-mono"
 cask "github"
 cask "google-chrome"
-cask "hiddenbar"
 cask "iterm2"
 cask "karabiner-elements"
 cask "maestral"
@@ -59,3 +54,4 @@ mas install 417375580
 mas install 1569813296 
 mas install 1440147259 
 mas install 937984704
+mas install 1452453066
