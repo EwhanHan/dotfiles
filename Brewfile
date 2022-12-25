@@ -5,9 +5,6 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
-
-cask_args appdir: "~/Applications"
-
 brew "curl"
 brew "fd"
 brew "gh"
@@ -47,9 +44,3 @@ cask "tg-pro"
 cask "visual-studio-code"
 cask "vlc"
 cask "zoom"
-
-mas install 417375580 
-mas install 1569813296 
-mas install 1440147259 
-mas install 937984704
-mas install 1452453066
